@@ -1,0 +1,122 @@
+ {
+     "products":
+       [{
+            "id": 1,
+            "price":120,
+            "name": "Everfresh Flowers",
+            "image": "https://image.cnbcfm.com/api/v1/image/105680013-1547583426762nike1.jpg?v=1547583682"
+          },
+          {
+            "id": 2,
+            "price":120,
+            "name": "Festive Deer",
+            "image": "https://sc02.alicdn.com/kf/HTB1DRCma0fvK1RjSszhq6AcGFXaZ.jpg"
+          },
+          {
+            "id": 3,
+            "price":120,
+            "name": "Morning Greens",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/61tBQKJJKaL._SL1500_.jpg"
+          },
+          {
+            "id": 4,
+            "price":120,
+            "name": "Everfresh Flowers",
+            "image": "https://i.pinimg.com/236x/36/9f/4c/369f4c4013e19c9b3c671de3dc696d2b.jpg"
+          },
+          {
+            "id": 5,
+            "price":100,
+            "name": "Festive Deer",
+            "image": "https://cdn140.picsart.com/268948212025211.png?r1024x1024"
+          },
+          {
+            "id": 6,
+            "price":120,
+            "name": "Everfresh Flowers",
+            "image": "https://i.pinimg.com/236x/36/9f/4c/369f4c4013e19c9b3c671de3dc696d2b.jpg"
+          },
+          {
+            "id": 7,
+            "price":120,
+            "name": "Festive Deer",
+            "image": "https://cdn140.picsart.com/268948212025211.png?r1024x1024"
+          },
+          {
+            "id": 8,
+            "price":120,
+            "name": "Morning Greens",
+            "image": "http://pngimg.com/uploads/running_shoes/running_shoes_PNG5827.png"
+          },
+          {
+            "id": 9,
+            "price":120,
+            "name": "Everfresh Flowers",
+            "image": "http://pngimg.com/uploads/dress_shirt/dress_shirt_PNG8109.png"
+          },
+          {
+            "id": 10,
+            "price":120,
+            "name": "Festive Deer",
+            "image": "https://cdn140.picsart.com/268948212025211.png?r1024x1024"
+          },
+          {
+            "id": 11,
+            "price":120,
+            "name": "Morning Greens",
+            "image": "http://pluspng.com/img-png/shoes-png-sneaker-png-transparent-image-2500.png"
+          },
+          {
+            "id": 12,
+            "price":120,
+            "name": "Everfresh Flowers",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/61tBQKJJKaL._SL1500_.jpg"
+          },
+          {
+            "id": 13,
+            "price":120,
+            "name": "Festive Deer",
+            "image": "https://cdn140.picsart.com/268948212025211.png?r1024x1024"
+          },
+          {
+            "id": 14,
+            "price":120,
+            "name": "Everfresh Flowers",
+            "image": "https://i.pinimg.com/236x/36/9f/4c/369f4c4013e19c9b3c671de3dc696d2b.jpg"
+          },
+          {
+            "id": 15,
+            "price":1200,
+            "name": "Everfresh",
+            "image": "https://i.pinimg.com/236x/36/9f/4c/369f4c4013e19c9b3c671de3dc696d2b.jpg"
+          }
+        ],
+     "similarProducts":[
+        {
+            "id": 1,
+            "price":120,
+            "name": "Everfresh Flowers",
+            "image": "https://ledscreensandlights.com/wp-content/uploads/2018/08/9.gif"
+          },
+          {
+            "id": 2,
+            "price":120,
+            "name": "Festive Deer",
+            "image": "https://cdn140.picsart.com/268948212025211.png?r1024x1024"
+          },
+          {
+            "id": 3,
+            "price":120,
+            "name": "Morning Greens",
+            "image": "http://pluspng.com/img-png/shoes-png-sneaker-png-transparent-image-2500.png"
+          },
+          {
+            "id": 4,
+            "price":120,
+            "name": "Everfresh Flowers",
+            "image": "https://i.pinimg.com/236x/36/9f/4c/369f4c4013e19c9b3c671de3dc696d2b.jpg"
+          }
+     ]
+    
+
+    }

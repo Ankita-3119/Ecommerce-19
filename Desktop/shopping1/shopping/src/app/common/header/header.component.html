@@ -1,0 +1,81 @@
+<div class="contact-box">
+    <div class="first">+91 8617769217</div>
+    <div class="second">teamerror123@gmail.com</div>
+    <div class="third">3-5 BUSINESS DAYS DELIVERY & FREE RETURNS</div>
+</div>
+<mat-progress-bar mode="indeterminate" *ngIf="loadingEnable"></mat-progress-bar>
+<div class="header-box">
+    <div class="container">
+        <div class="mobile-view">
+            <mat-icon (click)="toggelSidenav()">menu</mat-icon>
+        </div>
+        <div class="logo">
+            <a [routerLink]="['/home']"> <img
+                    src="https://www.nicepng.com/png/full/247-2475175_ecommerce-e-commerce-website-logo.png"
+                    width="80px" height="50px">
+            </a>
+        </div>
+        <!-- <form class="example-form">
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Search">
+                    <mat-icon matSuffix>search</mat-icon>
+                </mat-form-field>
+            </form> -->
+
+        <div class="menu">
+            <ul class="list">
+
+                <li class="contain" [routerLink]="['/home']" routerLinkActive="active"><span>HOME</span></li>
+                <li class="contain" [routerLink]="['/products']" routerLinkActive="active"><span>PRODUCTS</span></li>
+                <li class="contain" [routerLink]="['/images']" routerLinkActive="active"><span>CART</span></li>
+                <li class="contain"><span id="contact_us" >CONTACT-US</span>
+                </li>
+
+                <li class="contain">
+                    <button mat-stroked-button color="primary" *ngIf="!this.loginService.isLogged()" class="button"
+                        (click)="openLoginDialog()">LOGIN</button>
+                    <!-- <button mat-stroked-button color="primary" *ngIf="this.loginService.isLogged()" class="button"
+                        (click)="logOut()"> -->
+                        <button mat-button [matMenuTriggerFor]="menu" *ngIf="this.loginService.isLogged()">
+                            <img src="../../../assets/av.jpg" style="height:50px;width:50px;border-radius:50%" alt="">
+                        </button>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item (click)="logOut()" >Logout</button>
+                            <!-- <button mat-menu-item>Item 2</button> -->
+                        </mat-menu>
+                    <!-- </button> -->
+                </li>
+
+                <li class="contain profile dropdown" *ngIf="user">
+                    <img src="https://img1a.flixcart.com/www/linchpin/fk-cp-zion/img/profile-pic-male_2fd3e8.svg"
+                        width="25px">
+
+                    <div class="dropdown-content">
+                        <a [routerLink]="['/myprofile']">My Profile</a>
+                        <a>Orders</a>
+                        <a>Wishlist</a>
+                        <a>Notifications</a>
+                        <a (click)="logout()">Logout</a>
+                    </div>
+                </li>
+                <li class="contain" *ngIf="user" [routerLink]="['/shopping-cart']">
+                    <mat-icon>add_shopping_cart</mat-icon>
+                </li>
+            </ul>
+        </div>
+        <div class="cart-icon mobile-view" *ngIf="!user">
+            <button mat-stroked-button color="primary" class="button" (click)="openLoginDialog()">LOGIN</button>
+        </div>
+        <div class="cart-icon mobile-view" *ngIf="user">
+            <a [routerLink]="['/myprofile/notifications']">
+                <mat-icon>notification_important</mat-icon>
+            </a>&nbsp; &nbsp;
+            <a [routerLink]="['/shopping-cart']">
+                <mat-icon>add_shopping_cart</mat-icon>
+            </a>
+        </div>
+
+
+    </div>
+</div>
+<!-- <app-sidenav class="sidenavEnable"></app-sidenav> -->

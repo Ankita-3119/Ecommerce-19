@@ -1,0 +1,81 @@
+<div class="container" style="margin: 3rem auto;">
+    <div class="row">
+        <div class="col-md-5 col-10 mx-auto mt-5">
+            <!-- <mat-card> -->
+            <!-- <mat-card-header> -->
+            <!-- <mat-card-title>Registration</mat-card-title> -->
+            <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+            <!-- </mat-card-header> -->
+            <!-- <mat-card-content> -->
+            <h1 style="color: brown;">Signup</h1>
+            <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+                <mat-form-field class="full" appearance="fill">
+                    <mat-label>Name</mat-label>
+                    <input required ngModel name="name" #nemailField="ngModel" minlength="3"  type="text"
+                        matInput placeholder="Enter Name">
+                    <mat-hint *ngIf="nemailField.touched &&  f.value.name==''">
+                        <p class="text-danger">**Name is required!</p>
+                    </mat-hint>
+                    <mat-hint *ngIf="nemailField.touched &&  f.value.name.length <=3">
+                        <p class="text-danger">**Name length should be greater than 3 characters</p>
+                    </mat-hint>
+                </mat-form-field>
+                <mat-form-field class="full" appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input required ngModel name="email" #emailField="ngModel" email type="email" matInput
+                        placeholder="Enter Email">
+                    <mat-hint *ngIf="emailField.touched &&  f.value.email.length==''">
+                        <p class="text-danger">**Email required!</p>
+                    </mat-hint>
+                    <mat-hint *ngIf="emailField.errors?.email">
+                        <p class="text-danger">**Please enter a valid email</p>
+                    </mat-hint>
+                </mat-form-field>
+                <div class="mb-3">
+                    <label>Gender: </label>
+                    <mat-radio-group [formControl]="floatLabelControl" required>
+                        <mat-radio-button value="male" >Male</mat-radio-button>
+                        <mat-radio-button value="female">Female</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <mat-form-field class="full" appearance="fill">
+                    <mat-label>Phone Number</mat-label>
+                    <input required ngModel name="phone" #phoneField="ngModel" minlength="10" type="text"
+                        matInput placeholder="Enter Phone Number">
+                    <mat-hint *ngIf="phoneField.touched && f.value.phone==''">
+                        <p class="text-danger">**Phone Number is required</p>
+                    </mat-hint>
+                    <mat-hint *ngIf="phoneField.touched && f.value.phone.length!==10">
+                        <p class="text-danger">**Phone Number Must be 10 characters</p>
+                    </mat-hint>
+                </mat-form-field>
+                <mat-form-field class="full" appearance="fill">
+                    <mat-label>Password</mat-label>
+                    <input required ngModel name="password" #passwordField="ngModel" minlength="8" type="password"
+                        matInput placeholder="Enter Password">
+                    <mat-hint *ngIf="passwordField.touched && f.value.password==''">
+                        <p class="text-danger">**Password is required</p>
+                    </mat-hint>
+                    <mat-hint *ngIf="passwordField.touched && f.value.password.length<=7">
+                        <p class="text-danger">**Password length should be 8 characters</p>
+                    </mat-hint>
+                </mat-form-field>
+                <mat-form-field class="full" appearance="fill">
+                    <mat-label>Confirm Password</mat-label>
+                    <input required ngModel name="cpassword" #cpasswordField="ngModel" minlength="8" type="password"
+                        matInput placeholder="Enter Confirm Password">
+                    <mat-hint *ngIf="cpasswordField.touched && (f.value.password !== f.value.cpassword)">
+                        <p class="text-danger">**Both password does not matched!</p>
+                    </mat-hint>
+                </mat-form-field>
+                <button mat-raised-button color="accent"
+                    [disabled]="!f.valid || (f.value.password !== f.value.cpassword) || (f.value.phone.length != 10)">Sign Up</button>
+            </form>
+            <p class="mt-2">Already An Account ? <a routerLink="/login">Login</a></p>
+
+            <p class="text-danger"> {{errMessage}}</p>
+            <!-- </mat-card-content> -->
+            <!-- </mat-card> -->
+        </div>
+    </div>
+</div>
